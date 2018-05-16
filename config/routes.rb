@@ -7,4 +7,6 @@ Rails.application.routes.draw do
       resources :collages
     end
   end
+
+  post '/sessions/', to: 'sessions#create'
 end

@@ -21,6 +21,11 @@ gem 'puma', '~> 3.11'
 gem 'active_model_serializers'
 gem 'rack-cors'
 
+gem "figaro"
+
+
+gem "jwt", "~> 2.1"
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
