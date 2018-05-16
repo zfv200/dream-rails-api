@@ -10,5 +10,5 @@ class SessionsController < ApplicationController
       render json: { errors: ["We can't find ya!"]}, :status => :unprocessable_entity
     end
   end
-  
+
 end
