@@ -3,7 +3,8 @@ module Api
     class UsersController < ApplicationController
 
       def index
-        render json: User.includes(:dreams), include: ['dreams']
+        render json: User.all, include: ['dreams']
+        # User.includes(:dreams), include: ['dreams']
       end
 
     end

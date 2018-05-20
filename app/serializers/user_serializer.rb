@@ -1,3 +1,3 @@
 class UserSerializer < ActiveModel::Serializer
-  has_many :dreams
+  attributes :dreams
 end
