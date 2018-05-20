@@ -1,3 +1,3 @@
 class DreamSerializer < ActiveModel::Serializer
-  belongs_to :user
+  attributes :content, :user_id, :collage
 end
