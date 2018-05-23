@@ -4,7 +4,7 @@ class CreateDreams < ActiveRecord::Migration[5.2]
       t.belongs_to :user
       t.string :content
       t.string :adjectives
-      t.string :collage
+      t.text :collage
 
       t.timestamps
     end
