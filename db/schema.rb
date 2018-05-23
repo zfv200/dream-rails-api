@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 2018_05_15_211155) do
     t.bigint "user_id"
     t.string "content"
     t.string "adjectives"
-    t.string "collage"
+    t.text "collage"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_dreams_on_user_id"

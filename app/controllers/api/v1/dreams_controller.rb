@@ -7,7 +7,7 @@ module Api
       end
 
       def create
-        @dream = Dream.create(content: params["content"], user_id: params["user_id"])
+        @dream = Dream.create(dream_params)
         if @dream
           render json: @dream
         else
