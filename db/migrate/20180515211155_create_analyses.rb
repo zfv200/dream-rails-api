@@ -1,8 +1,8 @@
 class CreateAnalyses < ActiveRecord::Migration[5.2]
   def change
     create_table :analyses do |t|
-      t.string :content
-      t.string :image_url
+      t.string :url
+      t.belongs_to :dream
 
       t.timestamps
     end
