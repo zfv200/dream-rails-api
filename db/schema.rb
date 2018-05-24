@@ -16,10 +16,11 @@ ActiveRecord::Schema.define(version: 2018_05_15_211155) do
   enable_extension "plpgsql"
 
   create_table "analyses", force: :cascade do |t|
-    t.string "content"
-    t.string "image_url"
+    t.string "url"
+    t.bigint "dream_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["dream_id"], name: "index_analyses_on_dream_id"
   end
 
   create_table "collages", force: :cascade do |t|
