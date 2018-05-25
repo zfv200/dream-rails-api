@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_15_211155) do
+ActiveRecord::Schema.define(version: 2018_05_24_172921) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,6 +39,21 @@ ActiveRecord::Schema.define(version: 2018_05_15_211155) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_dreams_on_user_id"
+  end
+
+  create_table "images", force: :cascade do |t|
+    t.bigint "dream_id"
+    t.text "image_data"
+    t.string "WebkitFilter"
+    t.string "opacity"
+    t.string "width"
+    t.string "height"
+    t.string "border_radius"
+    t.string "left"
+    t.string "bottom"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["dream_id"], name: "index_images_on_dream_id"
   end
 
   create_table "users", force: :cascade do |t|
