@@ -7,7 +7,6 @@ module Api
       end
 
       def create
-        byebug
         @image = Image.create(image_params)
         if @image
           render json: @image
