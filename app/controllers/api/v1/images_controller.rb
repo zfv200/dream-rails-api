@@ -18,7 +18,7 @@ module Api
       private
 
       def image_params
-        params.require(:image).permit(:image_data, :dream_id, :opacity, :width, :height, :opacity, :border_radius, :WebkitFilter, :left, :top)
+        params.require(:image).permit(:image_data, :dream_id, :opacity, :width, :height, :opacity, :border_radius, :WebkitFilter, :left, :top, :z_index)
       end
 
     end

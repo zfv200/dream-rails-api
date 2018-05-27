@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(version: 2018_05_24_172921) do
     t.string "border_radius"
     t.string "left"
     t.string "top"
+    t.integer "z_index"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["dream_id"], name: "index_images_on_dream_id"

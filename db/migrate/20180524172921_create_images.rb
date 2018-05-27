@@ -10,6 +10,7 @@ class CreateImages < ActiveRecord::Migration[5.2]
       t.string :border_radius
       t.string :left
       t.string :top
+      t.integer :z_index
       t.timestamps
     end
   end
