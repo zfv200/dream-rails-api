@@ -7,7 +7,6 @@ module Api
       end
 
       def create
-        byebug
         @analysis = Analysis.create(analyses_params)
         if @analysis
           render json: @analysis
