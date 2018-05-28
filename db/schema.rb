@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 2018_05_15_211155) do
 
   create_table "analyses", force: :cascade do |t|
     t.string "url"
+    t.string "name"
     t.bigint "dream_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -24,7 +25,7 @@ ActiveRecord::Schema.define(version: 2018_05_15_211155) do
   end
 
   create_table "collages", force: :cascade do |t|
-    t.string "image_url"
+    t.text "image_url"
     t.bigint "dream_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

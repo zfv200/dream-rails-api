@@ -7,7 +7,7 @@ module Api
       end
 
       def create
-        @analysis = Analysis.create(url: params["url"])
+        @analysis = Analysis.create(analyses_params)
         if @analysis
           render json: @analysis
         else
@@ -17,9 +17,9 @@ module Api
 
       private
 
-      # def analyses_params
-      #   params.require(:analysis).permit(:user_id, :content, :collage)
-      # end
+      def analyses_params
+        params.require(:analysis).permit(:dream_id, :url, :name)
+      end
 
     end
   end
