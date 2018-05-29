@@ -11,7 +11,7 @@ module Api
         if @dream
           render json: @dream
         else
-          render json: { errors: @user.errors.full_messages }
+          render json: { errors: @dream.errors.full_messages }
         end
       end
 
